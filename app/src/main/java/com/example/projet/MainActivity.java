@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.widget.LinearLayout;
 
 import com.example.projet.Champignon.ChampiInfoActivity;
+import com.example.projet.CircuitGame.CircuitInfoActivity;
 import com.example.projet.DessinGame.DessinInfoActivity;
 import com.example.projet.JeuxPhoto.PhotoJeuInfoActivity;
 import com.example.projet.MidtermRace.MidtermRaceInfoActivity;
@@ -47,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
         cardDessin.setOnClickListener(v -> {
             startActivity(new Intent(this, DessinInfoActivity.class));
         });
+
+        LinearLayout cardCircuit = findViewById(R.id.card_circuit);
+        cardCircuit.setOnClickListener(v -> {
+            startActivity(new Intent(this, CircuitInfoActivity.class));
+        });
+
 
     }
 }

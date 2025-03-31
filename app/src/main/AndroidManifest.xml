@@ -29,6 +29,10 @@
         <activity android:name=".DessinGame.DessinInfoActivity" />
         <activity android:name=".DessinGame.DessinGameActivity" />
 
+        <activity android:name=".CircuitGame.CircuitInfoActivity" />
+        <activity android:name=".CircuitGame.CircuitGameActivity" />
+
+
 
         <activity
             android:name=".MainActivity"
