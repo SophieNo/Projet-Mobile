@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.content.Intent;
 import android.widget.LinearLayout;
 
+import com.example.projet.BDDville.CitySeeder;
 import com.example.projet.Champignon.ChampiInfoActivity;
 import com.example.projet.CircuitGame.CircuitInfoActivity;
 import com.example.projet.DessinGame.DessinInfoActivity;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        CitySeeder.seed(this);
 
 
         LinearLayout cardPhoto = findViewById(R.id.card_photo);
