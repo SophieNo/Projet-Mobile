@@ -38,8 +38,12 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
 
-
     implementation(libs.room.ktx)
+
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.gson)
+    implementation(libs.play.services.location)
 
     annotationProcessor(libs.room.compiler)
 

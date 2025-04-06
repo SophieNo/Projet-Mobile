@@ -14,6 +14,7 @@ import com.example.projet.CircuitGame.CircuitInfoActivity;
 import com.example.projet.DessinGame.DessinInfoActivity;
 import com.example.projet.JeuxPhoto.PhotoJeuInfoActivity;
 import com.example.projet.MidtermRace.MidtermRaceInfoActivity;
+import com.example.projet.jeuMeteo.TemperatureInfoActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout cardCircuit = findViewById(R.id.card_circuit);
         cardCircuit.setOnClickListener(v -> {
             startActivity(new Intent(this, CircuitInfoActivity.class));
+        });
+
+        LinearLayout cardTemp = findViewById(R.id.card_temp);
+        cardTemp.setOnClickListener(v -> {
+            startActivity(new Intent(this, TemperatureInfoActivity.class));
         });
 
 

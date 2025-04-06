@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/text_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Devinez l’écart de température entre votre position et une ville tirée au sort."
+            android:textSize="16sp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/text_ville_tiree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ville mystère : ..."
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:paddingBottom="12dp" />
+
+
+        <EditText
+            android:id="@+id/input_difference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entrez la différence (°C)"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valider"
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/button_retour_temp_game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Retour"
+            android:layout_marginTop="16dp"/>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

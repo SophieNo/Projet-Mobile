@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 import com.example.projet.BDDville.DAO.CityDao;
 import com.example.projet.BDDville.Entite.City;
 
-@Database(entities = {City.class}, version = 1)
+@Database(entities = {City.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static volatile AppDatabase INSTANCE;
