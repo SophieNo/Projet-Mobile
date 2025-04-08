@@ -46,7 +46,7 @@
             android:id="@+id/button_retour_temp_game"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Retour"
+            android:text="@string/back"
             android:layout_marginTop="16dp"/>
 
 

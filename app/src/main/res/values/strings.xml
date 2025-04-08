@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">Projet</string>
+    <string name="app_name">Mon Application de Jeux</string>
+    <string name="menu_title">Choisissez un jeu</string>
+    <string name="play">Jouer</string>
+    <string name="back">Retour</string>
+    <string name="temperature_game_desc">Devinez l’écart de température entre votre position et une ville tirée au hasard.</string>
+    <string name="submit">Valider</string>
+    <string name="hint_difference">Entrez la différence (°C)</string>
+    <string name="hint_input">Votre réponse</string>
+    <string name="info_champi">La saison des champignons bat son plein ! Touchez les cèpes pour marquer des points, évitez les phalloïdes (elles remettent votre score à zéro), et attention aux amanites tue-mouches qui brouillent l écran!</string>
+    <string name="info_circuit"> "🎯 Dans ce jeu, créez d'abord les éléments :
+        • 1er toucher ➜ Objectif 🎯
+• 2e toucher ➜ Bille ⚪
+• Tous les suivants ➜ Obstacles 🚧
+
+➡ Une fois la bille créée, inclinez votre appareil pour la faire rouler.
+🏁 Si elle atteint l'objectif, vous gagnez !
+💥 Si elle touche un obstacle, la partie est perdue et relancée automatiquement." </string>
+    <string name="info_dessin">"Un petit jeu de dessin libre : choisissez une couleur, puis touchez et glissez votre doigt pour dessiner sur l’écran !"</string>
+    <string name="info_midterm_race">"Touchez en haut ou en bas pour faire progresser un parti vers la victoire. Quand les deux se croisent, un parti gagne le Sénat !"</string>
+    <string name="info_photo">"Prenez une photo et appliquez des filtres amusants comme l’inversion, le flou, ou le changement de couleur !"</string>
+    <string name="info_temperature_game">"Dans ce jeu, une ville est tirée au sort (ex. Paris), et votre localisation est détectée.
+
+Votre objectif est de deviner la différence de température entre votre position actuelle et celle de la ville choisie.
+
+• Vous avez 3 essais.
+• Au 3e essai, un indice est donné (ville ou température).
+• Si vous trouvez la bonne différence, vous gagnez ! Sinon, une réponse s’affiche et vous pouvez rejouer."</string>
 </resources>

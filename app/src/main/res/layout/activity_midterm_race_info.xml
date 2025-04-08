@@ -8,7 +8,7 @@
         android:id="@+id/text_description_mr"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Touchez en haut ou en bas pour faire progresser un parti vers la victoire. Quand les deux se croisent, un parti gagne le Sénat !"
+        android:text="@string/info_midterm_race"
         android:padding="24dp"
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,7 +19,7 @@
         android:id="@+id/button_jouer_mr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jouer"
+        android:text="@string/play"
         app:layout_constraintTop_toBottomOf="@id/text_description_mr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -28,7 +28,7 @@
         android:id="@+id/button_retour_mr_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retour"
+        android:text="@string/back"
         app:layout_constraintTop_toBottomOf="@id/button_jouer_mr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

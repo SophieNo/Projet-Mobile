@@ -8,13 +8,7 @@
         android:id="@+id/text_description_temp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="🌡️ Dans ce jeu, une ville est tirée au sort (ex. Paris), et votre localisation est détectée.
-
-Votre objectif est de deviner la différence de température entre votre position actuelle et celle de la ville choisie.
-
-• Vous avez 3 essais.
-• Au 3e essai, un indice est donné (ville ou température).
-• Si vous trouvez la bonne différence, vous gagnez ! Sinon, une réponse s’affiche et vous pouvez rejouer."
+        android:text="@string/info_temperature_game"
         android:textSize="16sp"
         android:textColor="#333"
         android:lineSpacingExtra="4dp"
@@ -26,7 +20,7 @@ Votre objectif est de deviner la différence de température entre votre positio
         android:id="@+id/button_jouer_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jouer"
+        android:text="@string/play"
         app:layout_constraintTop_toBottomOf="@id/text_description_temp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +30,7 @@ Votre objectif est de deviner la différence de température entre votre positio
         android:id="@+id/button_retour_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retour"
+        android:text="@string/back"
         app:layout_constraintTop_toBottomOf="@id/button_jouer_temp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

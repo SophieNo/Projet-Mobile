@@ -8,7 +8,7 @@
         android:id="@+id/text_description_champi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="La saison des champignons bat son plein ! Touchez les cèpes pour marquer des points, évitez les phalloïdes (elles remettent votre score à zéro), et attention aux amanites tue-mouches qui brouillent l'écran !"
+        android:text="@string/info_champi"
         android:textSize="18sp"
         android:padding="24dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,7 +19,7 @@
         android:id="@+id/button_jouer_champi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jouer"
+        android:text="@string/play"
         app:layout_constraintTop_toBottomOf="@id/text_description_champi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -28,7 +28,7 @@
         android:id="@+id/button_retour_champi_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retour"
+        android:text="@string/back"
         app:layout_constraintTop_toBottomOf="@id/button_jouer_champi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

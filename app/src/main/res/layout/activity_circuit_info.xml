@@ -9,14 +9,7 @@
         android:id="@+id/text_description_circuit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="🎯 Dans ce jeu, créez d'abord les éléments :
-• 1er toucher ➜ Objectif 🎯
-• 2e toucher ➜ Bille ⚪
-• Tous les suivants ➜ Obstacles 🚧
-
-➡ Une fois la bille créée, inclinez votre appareil pour la faire rouler.
-🏁 Si elle atteint l'objectif, vous gagnez !
-💥 Si elle touche un obstacle, la partie est perdue et relancée automatiquement."
+        android:text="@string/info_circuit"
         android:textSize="16sp"
         android:textColor="#333"
         android:lineSpacingExtra="4dp"
@@ -28,7 +21,7 @@
         android:id="@+id/button_jouer_circuit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jouer"
+        android:text="@string/play"
         app:layout_constraintTop_toBottomOf="@id/text_description_circuit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +31,7 @@
         android:id="@+id/button_retour_circuit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retour"
+        android:text="@string/back"
         app:layout_constraintTop_toBottomOf="@id/button_jouer_circuit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

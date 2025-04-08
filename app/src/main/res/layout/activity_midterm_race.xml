@@ -19,7 +19,7 @@
         android:id="@+id/button_retour_mr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retour"
+        android:text="@string/back"
         app:layout_constraintTop_toBottomOf="@id/jeu_container"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
