@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="@string/info_photo"
         android:textSize="18sp"
-        android:padding="16dp"
+        android:padding="24dp"
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

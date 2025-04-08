@@ -3,10 +3,19 @@
     <string name="menu_title">Choisissez un jeu</string>
     <string name="play">Jouer</string>
     <string name="back">Retour</string>
-    <string name="temperature_game_desc">Devinez l’écart de température entre votre position et une ville tirée au hasard.</string>
     <string name="submit">Valider</string>
     <string name="hint_difference">Entrez la différence (°C)</string>
     <string name="hint_input">Votre réponse</string>
+
+    <string name="name_app">Mini Jeux</string>
+
+    <string name="name_champi">Jeu des Champignons</string>
+    <string name="name_circuit">"Circuit à bille"</string>
+    <string name="name_dessin">Jeu de dessin</string>
+    <string name="name_midterm_race">Midterm Race</string>
+    <string name="name_photo">Jeu Photo : Filtres</string>
+    <string name="name_temperature_game">"Jeu des Températures"</string>
+
     <string name="info_champi">La saison des champignons bat son plein ! Touchez les cèpes pour marquer des points, évitez les phalloïdes (elles remettent votre score à zéro), et attention aux amanites tue-mouches qui brouillent l écran!</string>
     <string name="info_circuit"> "🎯 Dans ce jeu, créez d'abord les éléments :
         • 1er toucher ➜ Objectif 🎯

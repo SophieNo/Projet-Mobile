@@ -4,10 +4,19 @@
     <string name="menu_title">Choose a game</string>
     <string name="play">Play</string>
     <string name="back">Back</string>
-    <string name="temperature_game_desc">Guess the temperature difference between your current location and a random city.</string>
     <string name="submit">Submit</string>
     <string name="hint_difference">Enter the difference (°C)</string>
     <string name="hint_input">Your answer</string>
+
+    <string name="name_app">Mini Game</string>
+
+    <string name="name_champi">Mushroom Game</string>
+    <string name="name_circuit">"Marble Game"</string>
+    <string name="name_dessin">Drawing game</string>
+    <string name="name_midterm_race">Midterm Race</string>
+    <string name="name_photo">Photo Game: Filters</string>
+    <string name="name_temperature_game">"Temperature Game"</string>
+
     <string name="info_champi">Mushroom season is in full swing! Tap the porcini mushrooms to score points, avoid the death caps (they reset your score to zero), and watch out for the fly agaric mushrooms that blur the screen!</string>
     <string name="info_circuit">" 🎯 In this game, start by creating the elements: • 1st tap ➜ Target 🎯
 • 2nd tap ➜ Ball ⚪

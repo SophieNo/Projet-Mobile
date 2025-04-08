@@ -13,7 +13,7 @@
             android:id="@+id/titre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mini Jeux"
+            android:text="@string/name_app"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="#333333"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:text="Jeu Photo : Filtres"
+                android:text="@string/name_photo"
                 android:textSize="18sp"
                 android:textColor="#000000" />
 
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:text="Midterm Race"
+                android:text="@string/name_midterm_race"
                 android:textSize="18sp"
                 android:textColor="#000000" />
         </LinearLayout>
@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:text="Jeu des Champignons"
+                android:text="@string/name_champi"
                 android:textSize="18sp"
                 android:textColor="#000000" />
         </LinearLayout>
@@ -121,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:text="Jeu de dessin"
+                android:text="@string/name_dessin"
                 android:textSize="18sp"
                 android:textColor="#000000" />
         </LinearLayout>
@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:text="Circuit à bille"
+                android:text="@string/name_circuit"
                 android:textSize="18sp"
                 android:textColor="#000000" />
         </LinearLayout>
@@ -174,7 +174,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:text="Jeu des Températures"
+                android:text="@string/name_temperature_game"
                 android:textSize="18sp"
                 android:textColor="#000000" />
         </LinearLayout>
