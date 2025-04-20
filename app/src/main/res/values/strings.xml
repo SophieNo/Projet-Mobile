@@ -35,4 +35,8 @@ Votre objectif est de deviner la différence de température entre votre positio
 • Vous avez 3 essais.
 • Au 3e essai, un indice est donné (ville ou température).
 • Si vous trouvez la bonne différence, vous gagnez ! Sinon, une réponse s’affiche et vous pouvez rejouer."</string>
+
+
+    <string name="best_score">Meilleur score : %1$d</string>
+
 </resources>

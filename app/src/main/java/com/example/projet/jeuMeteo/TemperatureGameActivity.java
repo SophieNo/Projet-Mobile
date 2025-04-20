@@ -1,6 +1,7 @@
 package com.example.projet.jeuMeteo;
 
 import android.Manifest;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ import java.util.Random;
 
 public class TemperatureGameActivity extends AppCompatActivity {
 
+    private static final String PREF_TEMPERATURE_BEST = "temp_game_best_score";
+
     private TextView instructionText;
     private EditText inputDifference;
     private Button submitButton;
@@ -29,6 +32,9 @@ public class TemperatureGameActivity extends AppCompatActivity {
     private double tempCible = 0.0;
     private double tempJoueur = 0.0;
     private TextView textVilleTiree ;
+    private int score = 0;
+    private int bestScore = 0;
+
 
     private FusedLocationProviderClient fusedLocationClient;
 
@@ -56,22 +62,17 @@ public class TemperatureGameActivity extends AppCompatActivity {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
+        SharedPreferences prefs = getSharedPreferences("temperature_prefs", MODE_PRIVATE);
+        bestScore = prefs.getInt(PREF_TEMPERATURE_BEST, 0);
+        score = 0;
+
+
         // Demander localisation
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
         } else {
             localiserJoueur();
         }
-
-//        new Thread(() -> {
-//            CityDao dao = AppDatabase.getInstance(this).cityDao();
-//            String ville = dao.getRandomCity();
-//
-//            runOnUiThread(() -> {
-//                villeCible = ville;
-//                getTemperaturePourVille(villeCible); // température cible via API
-//            });
-//        }).start();
 
         chargerVilleAleatoire();
 
@@ -88,6 +89,26 @@ public class TemperatureGameActivity extends AppCompatActivity {
     }
 
 
+//    private void verifierReponse() {
+//        String saisie = inputDifference.getText().toString().trim();
+//        if (saisie.isEmpty()) return;
+//
+//        int guess = Integer.parseInt(saisie);
+//        essai++;
+//
+//        if (guess == solution) {
+//            afficherFin("Bravo 🎉 ! Bonne réponse : " + solution + "°");
+//        } else if (essai == 3) {
+//            String indice = (new Random().nextBoolean()) ?
+//                    "La ville cible était : " + villeCible :
+//                    "Votre température actuelle : " + tempJoueur + "°";
+//            afficherFin("Dommage 😢 ! La bonne réponse était : " + solution + "°\n" + indice);
+//        } else {
+//            Toast.makeText(this, "Raté ! Encore " + (3 - essai) + " essai(s)", Toast.LENGTH_SHORT).show();
+//            inputDifference.setText("");
+//        }
+//    }
+
     private void verifierReponse() {
         String saisie = inputDifference.getText().toString().trim();
         if (saisie.isEmpty()) return;
@@ -95,18 +116,45 @@ public class TemperatureGameActivity extends AppCompatActivity {
         int guess = Integer.parseInt(saisie);
         essai++;
 
-        if (guess == solution) {
-            afficherFin("Bravo 🎉 ! Bonne réponse : " + solution + "°");
-        } else if (essai == 3) {
-            String indice = (new Random().nextBoolean()) ?
-                    "La ville cible était : " + villeCible :
-                    "Votre température actuelle : " + tempJoueur + "°";
-            afficherFin("Dommage 😢 ! La bonne réponse était : " + solution + "°\n" + indice);
-        } else {
-            Toast.makeText(this, "Raté ! Encore " + (3 - essai) + " essai(s)", Toast.LENGTH_SHORT).show();
+        if (Math.abs(guess - solution) <= 1) {
+
+            score++;
+            Toast.makeText(this, "✅ Bonne réponse ! Score : " + score, Toast.LENGTH_SHORT).show();
             inputDifference.setText("");
+
+            // Préparer la prochaine devinette
+            essai = 0;
+            tempCible = 0.0;
+            tempJoueur = 0.0;
+            submitButton.setEnabled(false);
+
+            chargerVilleAleatoire();
+            localiserJoueur();
+        } else if (essai < 3) {
+            Toast.makeText(this, "❌ Raté ! Essai " + essai + "/3", Toast.LENGTH_SHORT).show();
+            inputDifference.setText("");
+        } else {
+            // Mauvaise réponse au 3e essai → fin du jeu
+            SharedPreferences prefs = getSharedPreferences("temperature_prefs", MODE_PRIVATE);
+            bestScore = prefs.getInt(PREF_TEMPERATURE_BEST, 0);
+
+            if (score > bestScore) {
+                prefs.edit().putInt(PREF_TEMPERATURE_BEST, score).apply();
+                bestScore = score;
+            }
+
+            String indice = (new Random().nextBoolean()) ?
+                    "La ville était : " + villeCible :
+                    "Votre température : " + String.format("%.1f", tempJoueur) + "°";
+
+            afficherFin("⛔ Mauvaise réponse...\nBonne réponse : " + solution + "°\n"
+                    + indice + "\n\nScore : " + score + "\nMeilleur : " + bestScore);
         }
+
+        TextView scoreText = findViewById(R.id.text_score);
+        scoreText.setText("Score : " + score + " / Meilleur : " + bestScore);
     }
+
 
     private void afficherFin(String message) {
         new AlertDialog.Builder(this)

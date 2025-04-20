@@ -26,7 +26,8 @@ public class ChampiInfoActivity extends AppCompatActivity {
         int best = prefs.getInt("best_score", 0);
 
         TextView bestScore = findViewById(R.id.best_score_view);
-        bestScore.setText("Meilleur score : " + best);
+        String formattedScore = getString(R.string.best_score, best);
+        bestScore.setText(formattedScore);
 
     }
 }

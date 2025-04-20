@@ -35,4 +35,8 @@ Your goal is to guess the temperature difference between your current location a
 • You have 3 attempts.
 • On the 3rd attempt, you get a hint (either the city or the temperature).
 • If you guess the correct difference, you win! If not, the answer is revealed and you can play again."</string>
+
+
+    <string name="best_score">Best score: %1$d</string>
+
 </resources>
