@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Game App</string>
+    <string name="menu_title">Choose a game</string>
+    <string name="play">Play</string>
+    <string name="back">Back</string>
+    <string name="submit">Submit</string>
+    <string name="hint_difference">Enter the difference (°C)</string>
+    <string name="hint_input">Your answer</string>
+
+    <string name="name_app">Mini Game</string>
+
+    <string name="name_champi">Mushroom Game</string>
+    <string name="name_circuit">"Marble Game"</string>
+    <string name="name_dessin">Drawing game</string>
+    <string name="name_midterm_race">Midterm Race</string>
+    <string name="name_photo">Photo Game: Filters</string>
+    <string name="name_temperature_game">"Temperature Game"</string>
+
+    <string name="info_champi">Mushroom season is in full swing! Tap the porcini mushrooms to score points, avoid the death caps (they reset your score to zero), and watch out for the fly agaric mushrooms that blur the screen!</string>
+    <string name="info_circuit">" 🎯 In this game, start by creating the elements: • 1st tap ➜ Target 🎯
+• 2nd tap ➜ Ball ⚪
+• All following taps ➜ Obstacles 🚧
+
+➡ Once the ball is created, tilt your device to make it roll.
+🏁 If it reaches the target, you win!
+💥 If it hits an obstacle, the game is lost and restarts automatically. "</string>
+    <string name="info_dessin">A simple free-drawing game: Choose a color, then tap and drag your finger to draw on the screen!</string>
+    <string name="info_midterm_race">Tap at the top or bottom to help a party advance toward victory. When the two meet, one party wins the Senate!</string>
+    <string name="info_photo">Take a photo and apply fun filters like inversion, blur, or color change!</string>
+    <string name="info_temperature_game">"In this game, a city is randomly selected (e.g. Paris), and your current location is detected.
+
+Your goal is to guess the temperature difference between your current location and the chosen city.
+
+• You have 3 attempts.
+• On the 3rd attempt, you get a hint (either the city or the temperature).
+• If you guess the correct difference, you win! If not, the answer is revealed and you can play again."</string>
+
+
+    <string name="best_score">Best score: %1$d</string>
+
+</resources>
