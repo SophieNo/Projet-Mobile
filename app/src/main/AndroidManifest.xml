@@ -39,6 +39,8 @@
         <activity android:name=".jeuMeteo.TemperatureInfoActivity" />
         <activity android:name=".jeuMeteo.TemperatureGameActivity" />
 
+        <activity android:name=".JeuDistance.DistanceInfoActivity" />
+        <activity android:name=".JeuDistance.DistanceGameActivity" />
 
 
         <activity

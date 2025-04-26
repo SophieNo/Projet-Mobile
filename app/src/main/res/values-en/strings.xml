@@ -16,6 +16,8 @@
     <string name="name_midterm_race">Midterm Race</string>
     <string name="name_photo">Photo Game: Filters</string>
     <string name="name_temperature_game">"Temperature Game"</string>
+    <string name="name_distance_game">"Distance Games"</string>
+
 
     <string name="info_champi">Mushroom season is in full swing! Tap the porcini mushrooms to score points, avoid the death caps (they reset your score to zero), and watch out for the fly agaric mushrooms that blur the screen!</string>
     <string name="info_circuit">" 🎯 In this game, start by creating the elements: • 1st tap ➜ Target 🎯
@@ -36,7 +38,13 @@ Your goal is to guess the temperature difference between your current location a
 • On the 3rd attempt, you get a hint (either the city or the temperature).
 • If you guess the correct difference, you win! If not, the answer is revealed and you can play again."</string>
 
+    <string name="info_distance_game">"🌍 A distance game: a city is randomly selected and your current location is detected.\n\nYour mission is to guess the distance (in kilometers) between you and the selected city!\n\nYou have 3 attempts per guess.\nGood luck!"</string>
+
 
     <string name="best_score">Best score: %1$d</string>
+    <string name="enter_distance_hint">Enter the distance in kilometers</string>
+    <string name="guess_distance_instruction">Guess the distance between your position and the drawn city!</string>
+    <string name="city_drawn_label">Drawn city: %1$s</string>
+
 
 </resources>
