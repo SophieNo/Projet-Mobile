@@ -14,6 +14,7 @@ import androidx.core.app.ActivityCompat;
 
 import com.example.projet.BDDville.AppDatabase;
 import com.example.projet.BDDville.DAO.CityDao;
+import com.example.projet.BDDville.Entite.City;
 import com.example.projet.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -96,18 +97,22 @@ public class DistanceGameActivity extends AppCompatActivity {
     private void chargerVilleAleatoire() {
         new Thread(() -> {
             CityDao dao = AppDatabase.getInstance(this).cityDao();
-            String ville = dao.getRandomCity();
+            City ville = dao.getRandomCityObject(); // Attention: méthode différente de getRandomCity()
+
             runOnUiThread(() -> {
-                villeCible = ville;
-                textVilleTiree.setText(getString(R.string.city_drawn_label, villeCible));
-                // TODO : ici tu devrais récupérer la latitude/longitude de la ville depuis la BDD
-                // Pour l'instant, j'utilise Paris comme exemple
-                villeLat = 48.8566; // latitude Paris
-                villeLon = 2.3522;  // longitude Paris
-                calculerDistance();
+                if (ville != null) {
+                    villeCible = ville.name;
+                    villeLat = ville.latitude;
+                    villeLon = ville.longitude;
+
+                    textVilleTiree.setText("Ville tirée : " + villeCible);
+
+                    calculerDistance(); // Dès qu'on a la ville, on peut recalculer la distance
+                }
             });
         }).start();
     }
+
 
     private void calculerDistance() {
         if (userLat != 0 && userLon != 0 && villeLat != 0 && villeLon != 0) {

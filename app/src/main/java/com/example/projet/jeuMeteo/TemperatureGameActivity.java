@@ -183,7 +183,8 @@ public class TemperatureGameActivity extends AppCompatActivity {
 
             runOnUiThread(() -> {
                 villeCible = ville;
-                textVilleTiree.setText("Ville tirée : " + villeCible);
+                //textVilleTiree.setText("Ville tirée : " + villeCible);
+                textVilleTiree.setText(getString(R.string.city_drawn_label, villeCible));
                 getTemperaturePourVille(villeCible); // température cible
             });
         }).start();
