@@ -105,7 +105,8 @@ public class DistanceGameActivity extends AppCompatActivity {
                     villeLat = ville.latitude;
                     villeLon = ville.longitude;
 
-                    textVilleTiree.setText("Ville tirée : " + villeCible);
+                    //textVilleTiree.setText("Ville tirée : " + villeCible);
+                    textVilleTiree.setText(getString(R.string.city_drawn_label, villeCible));
 
                     calculerDistance(); // Dès qu'on a la ville, on peut recalculer la distance
                 }

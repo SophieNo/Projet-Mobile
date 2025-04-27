@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.gson)
     implementation(libs.play.services.location)
+    implementation(libs.play.services.maps)
 
     annotationProcessor(libs.room.compiler)
 
