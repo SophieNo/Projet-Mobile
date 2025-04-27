@@ -41,9 +41,13 @@ Votre objectif est de deviner la différence de température entre votre positio
     <string name="info_distance_game">"🌍 Un jeu de distance : une ville est tirée au hasard et votre position est détectée.\n\nVotre mission est de deviner la distance (en kilomètres) entre vous et cette ville !\n\nVous avez 3 essais par devinette.\nBonne chance !"</string>
 
 
+    <string name="valider">Valider</string>
     <string name="best_score">Meilleur score : %1$d</string>
+    <string name="score">Score : %1$d</string>
     <string name="enter_distance_hint">Entrez la distance en kilomètres</string>
+    <string name="enter_temperature_hint">Entrez la différence (°C)</string>
     <string name="guess_distance_instruction">Devinez la distance entre votre position et la ville tirée au hasard !</string>
+    <string name="guess_temperature_instruction">Devinez l’écart de température entre votre position et une ville tirée au sort.</string>
     <string name="city_drawn_label">Ville tirée : %1$s</string>
 
 

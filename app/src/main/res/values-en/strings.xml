@@ -41,9 +41,13 @@ Your goal is to guess the temperature difference between your current location a
     <string name="info_distance_game">"🌍 A distance game: a city is randomly selected and your current location is detected.\n\nYour mission is to guess the distance (in kilometers) between you and the selected city!\n\nYou have 3 attempts per guess.\nGood luck!"</string>
 
 
+    <string name="valider">Validate</string>
     <string name="best_score">Best score: %1$d</string>
+    <string name="score">Score : %1$d</string>
     <string name="enter_distance_hint">Enter the distance in kilometers</string>
+    <string name="enter_temperature_hint">Enter the difference (°C)</string>
     <string name="guess_distance_instruction">Guess the distance between your position and the drawn city!</string>
+    <string name="guess_temperature_instruction">Guess the temperature difference between your location and a randomly selected city.</string>
     <string name="city_drawn_label">Drawn city: %1$s</string>
 
 

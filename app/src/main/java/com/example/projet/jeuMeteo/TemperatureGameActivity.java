@@ -152,7 +152,7 @@ public class TemperatureGameActivity extends AppCompatActivity {
         }
 
         TextView scoreText = findViewById(R.id.text_score);
-        scoreText.setText("Score : " + score + " / Meilleur : " + bestScore);
+        scoreText.setText("Score : " + score );
     }
 
 
@@ -183,7 +183,8 @@ public class TemperatureGameActivity extends AppCompatActivity {
 
             runOnUiThread(() -> {
                 villeCible = ville;
-                textVilleTiree.setText("Ville tirée : " + villeCible);
+                //textVilleTiree.setText("Ville tirée : " + villeCible);
+                textVilleTiree.setText(getString(R.string.city_drawn_label, villeCible));
                 getTemperaturePourVille(villeCible); // température cible
             });
         }).start();
@@ -226,7 +227,7 @@ public class TemperatureGameActivity extends AppCompatActivity {
     private void checkBothTemperaturesReady() {
         if (tempCible != 0.0 && tempJoueur != 0.0) {
             solution = (int) Math.round(Math.abs(tempJoueur - tempCible));
-            Toast.makeText(this, "Les températures sont prêtes. À vous de jouer !", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Les températures sont prêtes. À vous de jouer !", Toast.LENGTH_SHORT).show();
             submitButton.setEnabled(true);
         }
     }

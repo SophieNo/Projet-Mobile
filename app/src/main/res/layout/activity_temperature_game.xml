@@ -14,7 +14,7 @@
             android:id="@+id/text_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Score : 0 / Meilleur : 0"
+            android:text="Score : 0"
             android:textSize="16sp"
             android:textColor="#333"
             android:paddingBottom="8dp"/>
@@ -24,7 +24,7 @@
             android:id="@+id/text_instruction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Devinez l’écart de température entre votre position et une ville tirée au sort."
+            android:text="string/guess_temperature_instruction"
             android:textSize="16sp"
             android:paddingBottom="16dp" />
 
@@ -32,7 +32,7 @@
             android:id="@+id/text_ville_tiree"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ville mystère : ..."
+            android:text="@string/city_drawn_label"
             android:textSize="16sp"
             android:textColor="#555555"
             android:paddingBottom="12dp" />
@@ -42,14 +42,14 @@
             android:id="@+id/input_difference"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Entrez la différence (°C)"
+            android:hint="@string/enter_temperature_hint"
             android:inputType="number" />
 
         <Button
             android:id="@+id/button_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Valider"
+            android:text="@string/valider"
             android:layout_marginTop="24dp" />
 
         <Button
