@@ -7,9 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyAelZcrPbtYg3W_qgACgN4tcwuj992VotQ"/>
+
 
 
     <application
@@ -22,6 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAelZcrPbtYg3W_qgACgN4tcwuj992VotQ"/>
 
         <activity android:name=".JeuxPhoto.FiltrePhoto" />
         <activity android:name=".JeuxPhoto.PhotoJeuInfoActivity" />
