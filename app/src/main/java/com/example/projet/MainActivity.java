@@ -20,6 +20,7 @@ import com.example.projet.JeuDistance.DistanceInfoActivity;
 import com.example.projet.JeuxPhoto.PhotoJeuInfoActivity;
 import com.example.projet.MidtermRace.MidtermRaceInfoActivity;
 import com.example.projet.jeuMeteo.TemperatureInfoActivity;
+import com.example.projet.Quiz.QuizDescriptionActivity;
 
 import java.util.Locale;
 
@@ -101,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, DistanceInfoActivity.class));
         });
 
+        LinearLayout cardQuiz = findViewById(R.id.card_quiz);
+        cardQuiz.setOnClickListener(v -> {
+            startActivity(new Intent(this, QuizDescriptionActivity.class));
+        });
 
 
     }
@@ -137,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
         ((TextView) ((LinearLayout) findViewById(R.id.card_circuit)).getChildAt(1)).setText(R.string.name_circuit);
         ((TextView) ((LinearLayout) findViewById(R.id.card_temp)).getChildAt(1)).setText(R.string.name_temperature_game);
         ((TextView) ((LinearLayout) findViewById(R.id.card_distance)).getChildAt(1)).setText(R.string.name_distance_game);
+        ((TextView) ((LinearLayout) findViewById(R.id.card_quiz)).getChildAt(1)).setText(R.string.name_quiz);
+
     }
 
     //findViewById(R.id.card_...) récupère ton LinearLayout de la carte

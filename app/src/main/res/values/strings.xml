@@ -16,6 +16,8 @@
     <string name="name_photo">Jeu Photo : Filtres</string>
     <string name="name_temperature_game">"Jeu des Températures"</string>
     <string name="name_distance_game">"Jeu des Distances"</string>
+    <string name="name_quiz">Quiz</string>
+
 
 
     <string name="info_champi">La saison des champignons bat son plein ! Touchez les cèpes pour marquer des points, évitez les phalloïdes (elles remettent votre score à zéro), et attention aux amanites tue-mouches qui brouillent l écran!</string>

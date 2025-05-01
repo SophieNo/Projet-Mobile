@@ -17,6 +17,7 @@
     <string name="name_photo">Photo Game: Filters</string>
     <string name="name_temperature_game">"Temperature Game"</string>
     <string name="name_distance_game">"Distance Games"</string>
+    <string name="name_quiz">Quiz</string>
 
 
     <string name="info_champi">Mushroom season is in full swing! Tap the porcini mushrooms to score points, avoid the death caps (they reset your score to zero), and watch out for the fly agaric mushrooms that blur the screen!</string>
