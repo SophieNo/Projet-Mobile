@@ -225,7 +225,7 @@ public class DistanceGameActivity extends AppCompatActivity {
 
         if (Math.abs(guess - vraieDistance) <= 10) { // ±10 km de tolérance
             score++;
-            Toast.makeText(this, "✅ Bonne réponse ! Score : " + score, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Bonne réponse ! Score : " + score, Toast.LENGTH_SHORT).show();
             inputDistance.setText("");
 
             essai = 0;
@@ -239,7 +239,7 @@ public class DistanceGameActivity extends AppCompatActivity {
             chargerVilleAleatoire();
             localiserJoueur();
         } else if (essai < 3) {
-            Toast.makeText(this, "❌ Raté ! Essai " + essai + "/3", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Raté ! Essai " + essai + "/3", Toast.LENGTH_SHORT).show();
             inputDistance.setText("");
         } else {
             SharedPreferences prefs = getSharedPreferences("distance_prefs", MODE_PRIVATE);

@@ -24,7 +24,7 @@
             android:id="@+id/text_instruction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="string/guess_temperature_instruction"
+            android:text="@string/guess_temperature_instruction"
             android:textSize="16sp"
             android:paddingBottom="16dp" />
 

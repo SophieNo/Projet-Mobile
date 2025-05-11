@@ -153,7 +153,7 @@ public class Terrain extends View {
             for (Obstacle o : obstacles) {
                 if (bille.chevauche(o)) {
                     finDePartie = true;
-                    afficherFinPartie("💥 Perdu ! La bille a touché un obstacle.");
+                    afficherFinPartie("Perdu ! La bille a touché un obstacle.");
                     return false;
                 }
             }
@@ -166,7 +166,7 @@ public class Terrain extends View {
 
                 if (dist < bille.getRayon() + objectif.getRayon() - 2f) { // marge de sécurité
                     finDePartie = true;
-                    afficherFinPartie("🏁 Gagné ! La bille a atteint l’objectif.");
+                    afficherFinPartie("Gagné ! La bille a atteint l’objectif.");
                     return true;
                 }
             }

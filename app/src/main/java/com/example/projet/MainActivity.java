@@ -1,9 +1,13 @@
 package com.example.projet;
 
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.os.Handler;
 import android.widget.Button;
@@ -21,8 +25,13 @@ import com.example.projet.JeuxPhoto.PhotoJeuInfoActivity;
 import com.example.projet.MidtermRace.MidtermRaceInfoActivity;
 import com.example.projet.jeuMeteo.TemperatureInfoActivity;
 import com.example.projet.Quiz.QuizDescriptionActivity;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 
+import java.util.List;
 import java.util.Locale;
+import android.Manifest;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,8 +43,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Init de la BDD interne
         CitySeeder.seed(this);
 
+        // Partie sur le choix de la langue
         flagIcon = findViewById(R.id.flag_icon);
 
         String language = getResources().getConfiguration().locale.getLanguage();
@@ -60,8 +71,35 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(() -> flagIcon.setEnabled(true), 1000);
 
 
+        TextView addressText = findViewById(R.id.text_user_address);
+
+        FusedLocationProviderClient fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+        } else {
+            fusedLocationClient.getLastLocation().addOnSuccessListener(location -> {
+                if (location != null) {
+                    Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+                    try {
+                        List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+                        if (!addresses.isEmpty()) {
+                            String adresse = addresses.get(0).getAddressLine(0);
+                            addressText.setText("📍 " + adresse);
+                        } else {
+                            addressText.setText("Adresse introuvable");
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        addressText.setText("Erreur géolocalisation");
+                    }
+                }
+            });
+        }
 
 
+
+        // Affichage des jeux
         LinearLayout cardPhoto = findViewById(R.id.card_photo);
         LinearLayout cardMidterm = findViewById(R.id.card_midterm);
 
