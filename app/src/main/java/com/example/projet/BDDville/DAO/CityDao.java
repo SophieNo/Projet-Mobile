@@ -24,6 +24,10 @@ public interface CityDao {
     @Query("DELETE FROM cities")
     void clearAll();
 
-    @Query("SELECT name FROM cities ORDER BY RANDOM() LIMIT 1;\n")
+    @Query("SELECT name FROM cities ORDER BY RANDOM() LIMIT 1")
     String getRandomCity();
+
+    @Query("SELECT * FROM cities ORDER BY RANDOM() LIMIT 1")
+    City getRandomCityObject();
+
 }

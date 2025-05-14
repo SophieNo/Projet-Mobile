@@ -12,10 +12,14 @@ public class City {
     public String name;
     public String country;
     public int population;
+    public double latitude;
+    public double longitude;
 
-    public City(String name, String country, int population) {
+    public City(String name, String country, int population, double latitude, double longitude) {
         this.name = name;
         this.country = country;
         this.population = population;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 }

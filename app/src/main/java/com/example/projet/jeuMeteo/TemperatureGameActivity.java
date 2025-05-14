@@ -119,7 +119,7 @@ public class TemperatureGameActivity extends AppCompatActivity {
         if (Math.abs(guess - solution) <= 1) {
 
             score++;
-            Toast.makeText(this, "✅ Bonne réponse ! Score : " + score, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Bonne réponse ! Score : " + score, Toast.LENGTH_SHORT).show();
             inputDifference.setText("");
 
             // Préparer la prochaine devinette
@@ -131,7 +131,7 @@ public class TemperatureGameActivity extends AppCompatActivity {
             chargerVilleAleatoire();
             localiserJoueur();
         } else if (essai < 3) {
-            Toast.makeText(this, "❌ Raté ! Essai " + essai + "/3", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Raté ! Essai " + essai + "/3", Toast.LENGTH_SHORT).show();
             inputDifference.setText("");
         } else {
             // Mauvaise réponse au 3e essai → fin du jeu
@@ -147,12 +147,12 @@ public class TemperatureGameActivity extends AppCompatActivity {
                     "La ville était : " + villeCible :
                     "Votre température : " + String.format("%.1f", tempJoueur) + "°";
 
-            afficherFin("⛔ Mauvaise réponse...\nBonne réponse : " + solution + "°\n"
+            afficherFin("Mauvaise réponse...\nBonne réponse : " + solution + "°\n"
                     + indice + "\n\nScore : " + score + "\nMeilleur : " + bestScore);
         }
 
         TextView scoreText = findViewById(R.id.text_score);
-        scoreText.setText("Score : " + score + " / Meilleur : " + bestScore);
+        scoreText.setText("Score : " + score );
     }
 
 
@@ -183,7 +183,8 @@ public class TemperatureGameActivity extends AppCompatActivity {
 
             runOnUiThread(() -> {
                 villeCible = ville;
-                textVilleTiree.setText("Ville tirée : " + villeCible);
+                //textVilleTiree.setText("Ville tirée : " + villeCible);
+                textVilleTiree.setText(getString(R.string.city_drawn_label, villeCible));
                 getTemperaturePourVille(villeCible); // température cible
             });
         }).start();
@@ -226,7 +227,7 @@ public class TemperatureGameActivity extends AppCompatActivity {
     private void checkBothTemperaturesReady() {
         if (tempCible != 0.0 && tempJoueur != 0.0) {
             solution = (int) Math.round(Math.abs(tempJoueur - tempCible));
-            Toast.makeText(this, "Les températures sont prêtes. À vous de jouer !", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Les températures sont prêtes. À vous de jouer !", Toast.LENGTH_SHORT).show();
             submitButton.setEnabled(true);
         }
     }

@@ -15,6 +15,10 @@
     <string name="name_midterm_race">Midterm Race</string>
     <string name="name_photo">Jeu Photo : Filtres</string>
     <string name="name_temperature_game">"Jeu des Températures"</string>
+    <string name="name_distance_game">"Jeu des Distances"</string>
+    <string name="name_quiz">Quiz</string>
+
+
 
     <string name="info_champi">La saison des champignons bat son plein ! Touchez les cèpes pour marquer des points, évitez les phalloïdes (elles remettent votre score à zéro), et attention aux amanites tue-mouches qui brouillent l écran!</string>
     <string name="info_circuit"> "🎯 Dans ce jeu, créez d'abord les éléments :
@@ -36,7 +40,17 @@ Votre objectif est de deviner la différence de température entre votre positio
 • Au 3e essai, un indice est donné (ville ou température).
 • Si vous trouvez la bonne différence, vous gagnez ! Sinon, une réponse s’affiche et vous pouvez rejouer."</string>
 
+    <string name="info_distance_game">"🌍 Un jeu de distance : une ville est tirée au hasard et votre position est détectée.\n\nVotre mission est de deviner la distance (en kilomètres) entre vous et cette ville !\n\nVous avez 3 essais par devinette.\nBonne chance !"</string>
 
+
+    <string name="valider">Valider</string>
     <string name="best_score">Meilleur score : %1$d</string>
+    <string name="score">Score : %1$d</string>
+    <string name="enter_distance_hint">Entrez la distance en kilomètres</string>
+    <string name="enter_temperature_hint">Entrez la différence (°C)</string>
+    <string name="guess_distance_instruction">Devinez la distance entre votre position et la ville tirée au hasard !</string>
+    <string name="guess_temperature_instruction">Devinez l’écart de température entre votre position et une ville tirée au sort.</string>
+    <string name="city_drawn_label">Ville tirée : %1$s</string>
+
 
 </resources>
