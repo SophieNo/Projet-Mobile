@@ -15,7 +15,7 @@ public class TemperatureService {
         void onError(String errorMessage);
     }
 
-    private static final String API_KEY = "dc754e849acc1ea0e3b01c41f066598023";
+    private static final String API_KEY = "test";
     private static final String BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
     public static void getTemperatureByCity(String cityName, TemperatureCallback callback) {
